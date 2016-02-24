@@ -33,7 +33,7 @@ namespace ShaBenchmark
 
         private static void GetHash(HashAlgorithm hash)
         {
-            var str = Guid.NewGuid().ToString() + Guid.NewGuid().ToString() + Guid.NewGuid().ToString() + Guid.NewGuid().ToString();
+            var str = Guid.NewGuid().ToString() + Guid.NewGuid().ToString() + Guid.NewGuid().ToString()  + Guid.NewGuid().ToString();
             hash.ComputeHash(Encoding.UTF8.GetBytes(str));
         }
     }

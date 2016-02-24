@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace ShaBenchmark
 {
@@ -13,13 +8,19 @@ namespace ShaBenchmark
         static void Main(string[] args)
         {
             const int warmUp = 1000;
-            BenchIt(new Sha256Bench(warmUp));
-            BenchIt(new Sha1Bench(warmUp));
-            BenchIt(new Md5Bench(warmUp));
-            const int benchCount = 5000000;
-            BenchIt(new Sha256Bench(benchCount));
-            BenchIt(new Sha1Bench(benchCount));
-            BenchIt(new Md5Bench(benchCount));
+            BenchItAll(warmUp);
+            const int benchCount = 500000;
+            BenchItAll(benchCount);
+        }
+
+        private static void BenchItAll(int count)
+        {
+            BenchIt(new Sha256Bench(count));
+            BenchIt(new Sha256CryptoServiceProviderBench(count));
+            BenchIt(new Sha1Bench(count));
+            BenchIt(new Sha1CryptoServiceProviderBench(count));
+            BenchIt(new Md5Bench(count));
+            BenchIt(new Md5CryptoServiceProviderBench(count));
         }
 
         private static void BenchIt(BenchmarkBase benchmark)

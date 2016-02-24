@@ -2,9 +2,9 @@ using System.Security.Cryptography;
 
 namespace ShaBenchmark
 {
-    public class Md5Bench : BenchmarkBase
+    public class Md5CryptoServiceProviderBench : BenchmarkBase
     {
-        public Md5Bench(int count) : base(count)
+        public Md5CryptoServiceProviderBench(int count) : base(count)
         {
         }
 
