@@ -33,14 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NBench, Version=0.1.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NBench.0.1.6\lib\net45\NBench.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NBench.Runner, Version=0.1.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NBench.Runner.0.1.6\lib\net45\NBench.Runner.exe</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

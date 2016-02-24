@@ -10,7 +10,7 @@ namespace ShaBenchmark
 
         protected override HashAlgorithm GetHashAlgorithm()
         {
-            return SHA256.Create();
+            return new SHA256Managed();
         }
     }
 }

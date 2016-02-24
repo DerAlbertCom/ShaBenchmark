@@ -16,7 +16,7 @@ namespace ShaBenchmark
             BenchIt(new Sha256Bench(warmUp));
             BenchIt(new Sha1Bench(warmUp));
             BenchIt(new Md5Bench(warmUp));
-            const int benchCount = 500000;
+            const int benchCount = 5000000;
             BenchIt(new Sha256Bench(benchCount));
             BenchIt(new Sha1Bench(benchCount));
             BenchIt(new Md5Bench(benchCount));
