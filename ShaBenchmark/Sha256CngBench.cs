@@ -2,15 +2,15 @@ using System.Security.Cryptography;
 
 namespace ShaBenchmark
 {
-    public class Md5Bench : BenchmarkBase
+    public class Sha256CngBench : BenchmarkBase
     {
-        public Md5Bench(int count) : base(count)
+        public Sha256CngBench(int count) : base(count)
         {
         }
 
         protected override HashAlgorithm GetHashAlgorithm()
         {
-            return MD5.Create();
+            return new SHA256Cng();
         }
     }
 }

@@ -45,12 +45,15 @@
   <ItemGroup>
     <Compile Include="BenchmarkBase.cs" />
     <Compile Include="MD5Bench.cs" />
+    <Compile Include="Md5CngBench.cs" />
     <Compile Include="Md5CryptoServiceProviderBench.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sha1Bench.cs" />
+    <Compile Include="Sha1CngBench.cs" />
+    <Compile Include="Sha1ManagedBench.cs" />
     <Compile Include="Sha1CryptoServiceProviderBench.cs" />
-    <Compile Include="Sha256Bench.cs" />
+    <Compile Include="Sha256CngBench.cs" />
+    <Compile Include="Sha256ManagedBench.cs" />
     <Compile Include="Sha256CryptoServiceProviderBench.cs" />
   </ItemGroup>
   <ItemGroup>

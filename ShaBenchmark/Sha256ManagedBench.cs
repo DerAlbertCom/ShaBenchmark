@@ -2,9 +2,9 @@
 
 namespace ShaBenchmark
 {
-    public class Sha256Bench : BenchmarkBase
+    public class Sha256ManagedBench : BenchmarkBase
     {
-        public Sha256Bench(int count) : base(count)
+        public Sha256ManagedBench(int count) : base(count)
         {
         }
 

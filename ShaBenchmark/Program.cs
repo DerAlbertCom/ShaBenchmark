@@ -15,12 +15,15 @@ namespace ShaBenchmark
 
         private static void BenchItAll(int count)
         {
-            BenchIt(new Sha256Bench(count));
+            BenchIt(new Sha256ManagedBench(count));
             BenchIt(new Sha256CryptoServiceProviderBench(count));
-            BenchIt(new Sha1Bench(count));
+            BenchIt(new Sha256CngBench(count));
+            BenchIt(new Sha1ManagedBench(count));
             BenchIt(new Sha1CryptoServiceProviderBench(count));
+            BenchIt(new Sha1CngBench(count));
             BenchIt(new Md5Bench(count));
             BenchIt(new Md5CryptoServiceProviderBench(count));
+            BenchIt(new Md5CngBench(count));
         }
 
         private static void BenchIt(BenchmarkBase benchmark)
