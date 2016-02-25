@@ -7,10 +7,29 @@ namespace ShaBenchmark
     public abstract class BenchmarkBase
     {
         private readonly int count;
+        private readonly byte[] bytes;
 
-        protected BenchmarkBase(int count)
+        protected BenchmarkBase(int count, int length)
         {
             this.count = count;
+            this.bytes = CreateBytes(length);
+        }
+
+        private byte[] CreateBytes(int length)
+        {
+            return Encoding.UTF8.GetBytes(RandomString(length));
+        }
+
+        private string RandomString(int size)
+        {
+            var builder = new StringBuilder();
+            var random = new Random();
+            for (int i = 0; i < size; i++)
+            {
+                builder.Append(Convert.ToChar(Convert.ToInt32(Math.Floor(26*random.NextDouble() + 65))));
+            }
+
+            return builder.ToString();
         }
 
         protected abstract HashAlgorithm GetHashAlgorithm();
@@ -24,17 +43,16 @@ namespace ShaBenchmark
             }
             else
             {
-                for (int i = 0; i < this.count; i++)
+                for (int i = 0; i < count; i++)
                 {
                     GetHash(hash);
                 }
             }
         }
 
-        private static void GetHash(HashAlgorithm hash)
+        private void GetHash(HashAlgorithm hash)
         {
-            var str = Guid.NewGuid().ToString() + Guid.NewGuid().ToString() + Guid.NewGuid().ToString()  + Guid.NewGuid().ToString();
-            hash.ComputeHash(Encoding.UTF8.GetBytes(str));
+            hash.ComputeHash(bytes);
         }
     }
 }

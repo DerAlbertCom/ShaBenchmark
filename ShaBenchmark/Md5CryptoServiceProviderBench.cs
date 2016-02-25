@@ -4,7 +4,7 @@ namespace ShaBenchmark
 {
     public class Md5CryptoServiceProviderBench : BenchmarkBase
     {
-        public Md5CryptoServiceProviderBench(int count) : base(count)
+        public Md5CryptoServiceProviderBench(int count, int length) : base(count, length)
         {
         }
 

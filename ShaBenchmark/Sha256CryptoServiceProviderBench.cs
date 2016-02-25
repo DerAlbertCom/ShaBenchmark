@@ -4,7 +4,7 @@ namespace ShaBenchmark
 {
     public class Sha256CryptoServiceProviderBench : BenchmarkBase
     {
-        public Sha256CryptoServiceProviderBench(int count) : base(count)
+        public Sha256CryptoServiceProviderBench(int count, int length) : base(count, length)
         {
         }
 

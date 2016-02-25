@@ -4,7 +4,7 @@ namespace ShaBenchmark
 {
     public class Sha256ManagedBench : BenchmarkBase
     {
-        public Sha256ManagedBench(int count) : base(count)
+        public Sha256ManagedBench(int count, int length) : base(count, length)
         {
         }
 

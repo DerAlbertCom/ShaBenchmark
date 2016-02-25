@@ -4,7 +4,7 @@ namespace ShaBenchmark
 {
     public class Md5CngBench : BenchmarkBase
     {
-        public Md5CngBench(int count) : base(count)
+        public Md5CngBench(int count, int length) : base(count, length)
         {
         }
 

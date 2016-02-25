@@ -4,7 +4,7 @@ namespace ShaBenchmark
 {
     public class Sha256CngBench : BenchmarkBase
     {
-        public Sha256CngBench(int count) : base(count)
+        public Sha256CngBench(int count, int length) : base(count, length)
         {
         }
 
